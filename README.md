@@ -100,5 +100,5 @@ Open device or emulator and from the terminal (you can open the terminal from An
     adb shell "LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/foo_unittest"
     
   
-![sms](https://wiki.mtlabs.local/xwiki/bin/download/R%26D/Client%20Android/Android%20NDK%20with%20Google%20Test/WebHome/image.png?width=1100&height=379)  
+![googletest](https://imgur.com/I8L2B9O)  
     
