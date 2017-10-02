@@ -10,7 +10,7 @@ I did not find a clear guide how to do it, But I followed this document and this
 
 If you are opening a new project, do not forget to check the 'include c++'.
 
-Step1:
+## Step1:
 
 Create jni folder or use app/src/main/cpp folder.
 
@@ -35,10 +35,10 @@ foo_unittest.cc:
        EXPECT_EQ(0, foo(0, 0));
     }
     TEST(FooTest,OneOne) {
-    EXPECT_EQ(2, foo(1, 1));
+       EXPECT_EQ(2, foo(1, 1));
     }
   
-Step 2:
+## Step 2:
 
 Add to CMakeLists.txt
 
@@ -80,7 +80,7 @@ Add to build.gradle(app)
     }
 
 
-Step 3:
+## Step 3:
 
 Sync the project,  run "Make Project".
 
@@ -88,9 +88,9 @@ If your build succeeds, will build both 'libfoo.so' and 'foo_unittest' under:
 
     app/build/intermediates/cmake/debug/obj/x86/libfoo.so
 
-     app/.externalNativeBuild/cmake/debug/x86/foo_unittest
+    app/.externalNativeBuild/cmake/debug/x86/foo_unittest
 
-Step 4:
+## Step 4:
 
 Open device or emulator and from the terminal (you can open the terminal from Android Studio, located at the bottom) write:
 
@@ -98,3 +98,7 @@ Open device or emulator and from the terminal (you can open the terminal from An
     adb push app/.externalNativeBuild/cmake/debug/x86/foo_unittest /data/local/tmp/
     adb shell chmod 775 /data/local/tmp/foo_unittest
     adb shell "LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/foo_unittest"
+    
+  
+![sms](https://wiki.mtlabs.local/xwiki/bin/download/R%26D/Client%20Android/Android%20NDK%20with%20Google%20Test/WebHome/image.png?width=1100&height=379)  
+    
