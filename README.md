@@ -28,31 +28,45 @@ extern int foo(int x, int y);
 
 foo_unittest.cc:
 
-#include <gtest/gtest.h>
-#include "foo.h"
-
-TEST(FooTest,ZeroZero) {
+  #include <gtest/gtest.h>
+  
+  #include "foo.h"
+  
+  TEST(FooTest,ZeroZero) {
+  
     EXPECT_EQ(0, foo(0, 0));
-}
-TEST(FooTest,OneOne) {
+    
+  }
+  
+  TEST(FooTest,OneOne) {
+  
     EXPECT_EQ(2, foo(1, 1));
-}
-
+    
+  }
+  
 Step 2:
 
 Add to CMakeLists.txt
 
 cmake_minimum_required(VERSION 3.4.1)
 
+
 add_library(foo SHARED src/main/jni/foo.cpp)
 
+
 set(GOOGLETEST_ROOT ${ANDROID_NDK}/sources/third_party/googletest/googletest)
+
 add_library(gtest STATIC ${GOOGLETEST_ROOT}/src/gtest_main.cc ${GOOGLETEST_ROOT}/src/gtest-all.cc)
+
 target_include_directories(gtest PRIVATE ${GOOGLETEST_ROOT})
+
 target_include_directories(gtest PUBLIC ${GOOGLETEST_ROOT}/include)
 
+
 add_executable(foo_unittest src/main/jni/foo_unittest.cc)
+
 target_link_libraries(foo_unittest gtest foo)
+
 
 
 Add to build.gradle(app)
