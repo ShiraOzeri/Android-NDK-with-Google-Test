@@ -100,5 +100,5 @@ Open device or emulator and from the terminal (you can open the terminal from An
     adb shell "LD_LIBRARY_PATH=/data/local/tmp /data/local/tmp/foo_unittest"
     
   
-![googletest](https://imgur.com/I8L2B9O)  
+![googletest](https://s1.postimg.org/19hupubef3/image.png)  
     
