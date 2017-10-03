@@ -6,7 +6,9 @@ Requirements:
 
 The latest version of NDK has the gtest included. (my ndk : 15.2.4203891)
 
-I did not find a clear guide how to do it, But I followed this document and this questions.
+I did not find a clear guide how to do it, But I followed [this document](https://android.googlesource.com/platform/ndk/+/master/sources/third_party/googletest/README.NDK)  and [this questions](https://stackoverflow.com/questions/46429958/android-ndk-with-google-test).
+
+
 
 If you are opening a new project, do not forget to check the 'include c++'.
 
